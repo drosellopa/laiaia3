@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacte i més - La cuina de la iaia</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <link rel="icon" href="assets/images/logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <a href="gracies.html" style="display:none"></a> -->
+    <include src="./views/header.html"></include>
+    <main class="container main-contacte">
+        <section id="contact-form">
+            <h2>Formulari de contacte</h2>
+            <form 
+                name="contacte"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/gracies.html"
+                class="needs-validation form-contacte"
+                novalidate
+            >
+                <input type="hidden" name="form-name" value="contacte">
+               
+                <!-- Aquest és el HoneyPot amagat -->
+                <div class="d-none">
+                    <label>Si ets humà, deixa aquest camp buit: <input name="bot-field"></label>
+                </div>
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom:</label>
+                    <input type="text" id="nom" name="nom" class="form-control" required>
+                    <div class="invalid-feedback">Si us plau, introdueix el teu nom.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="correu" class="form-label">Correu electrònic:</label>
+                    <input type="email" id="correu" name="correu" class="form-control" required>
+                    <div class="invalid-feedback">Si us plau, introdueix una adreça de correu vàlida.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="missatge" class="form-label">Missatge:</label>
+                    <textarea id="missatge" name="missatge" class="form-control" rows="5" required></textarea>
+                    <div class="invalid-feedback">Si us plau, introdueix el teu missatge.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Envia</button>
+            </form>
+        </section>
+    </main>
+    <include src="./views/footer.html"></include>
+</body>
+</html>

@@ -27,3 +27,49 @@ Sé que no es lo más moderno, pero así es la única forma de que funcione.
 
 Segundo commit "Instalación de Tailwind"
 
+## Colores y fuentes
+
+### Colores
+Lo primero que hago es configurar los colores, para ello configuro el archivo tailwind.config.js añadiendo los colores principales que ya usaba: #FFC107 como primario y el #3F2E85 como secundario. De esta forma en el HTML puedo usar directamente clases como text-primary o bg-secondary.  
+
+Pruebo que los colores funcionan bien: Pongo el h1 de la portada de color text-secondary y funciona.
+
+
+### Fuente Roboto, Arial, Sans-serif
+Para mantener la misma tipografía que en la pac2, que era Roboto añado el enlace a Google Fonts en el <head> de todas las páginas HTML y actualizo la configuración de Tailwind para que use Roboto en lugar de la suya.  
+
+Compruebo la fuente y ya es Roboto.
+
+## Incorporo el header de la PAC2 
+Importo el header de la pac2 pero ya empiezo a usar el atomic css de Tailwind.  
+Describo lo que hago en cada etiqueta y la toma de decisiones en la documenteció para que quede reflejado todo lo que hago:  
+- Header: 
+    * text-secondary: Color secundario para el texto
+    * bg-white: Fondo blanco
+    * shadow-md => La sombra que le quedaba mejor era la md (media o moderada)
+- div: 
+    * container: El contenido tendrá limitación de anchura ya que se ajusta el max-width de forma responsive 
+    * mx-auto: Centrado con marging auto.
+    * px-4: 1 rem de padding horizonta
+    * py-3: 0.75 rem de padding vertical
+    * flex: display: flex
+    * items-center: align-items center
+    * justify-between: un space-between en justify content
+
+- Enlace el logo:
+    * flex: creación del flex entre la imagen y el texto.
+    * items-center: centra verticalmente el logo y el texto,.
+    * gap-2: Espacio de separación de los hijos del flex, el gap.
+    * font-bold: negrita.
+    * text-xl: tamaño de fuente grande
+    * no-underline: sin subrallado de las a
+- Nav. 
+    * hidden: Como no creo el menú  de barras del móvil lo hago desaparecer
+    * sm:block: Hago aparecer el menú en pantallas superiores a 640px
+- ul 
+    * flex: flex horizontal de los items de menú.
+    * gap-6: Espacio de separación de los hijos del flex, el gap. En este caso más grande 1.5 rem
+
+- li a
+    * hover:text-primary: al hacer un hover, cambia el color del secundario al primario.
+    * transition: transición del hover.
