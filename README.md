@@ -106,3 +106,50 @@ Describo lo que hago en cada etiqueta y la toma de decisiones en la documenteci�
   * text-sm: tamaño pequeño
 
 **Cuarto commit -m "Creado el footer con los estilos de tailwind. Importado FontAwesome"**
+
+## Página contacte.html
+He pegado todo el HTML de la pec2 de la página de contacto. He quitado todas las clases y he puesto las clases de Tailwind, se parece bastante al original.  
+
+Las clases:
+
+- main
+   * max-w-2xl: He limitado el main para que no sea tan grande, max-width de 672px, para el formulario
+  * mx-auto: Centra el contenedor horizontalmente con márgenes auto
+  * px-4: Padding horizontal de 1rem (16px)
+  * py-10: padding 40px arriba y abajo
+- section#contact-form
+  * text-2xl: Título grande
+  * font-bold: Negrita
+  * text-secondary: Texto secundario
+  * mb-6: margin-bottom
+- Form
+  * space-y-5: Margin vertical entre cada campo del formulario
+- label
+  * block: display: block
+  * text-gray-700: Color gris oscuro
+  * font-medium: Grueso de 500 un poco más ancho que el normal de 400
+  * mb-1: Margen inferior  para separar el label del input
+- input y textarea
+  * w-full: Ancho 100%
+  * px-4, py-2: paddings
+  * border-gray-300: Borde gris claro
+  * rounded-md: Border radius
+  * focus:outline-none: Outline eliminado
+  * focus:ring-2: outline de tailwind del input 2px
+  * focus:ring-secondary: color del ring secondary
+  * focus:border-transparent: Hace que el borde normal se vuelva transparente para que se vea el ring 
+- Mensajes de error 
+  * mt-1: MArgin top
+  * text-sm: Fuente pequeña
+  * text-red-600: Color rojo
+- Submit
+  * px-6, p-2: paddings
+  * bg-secondary: Fondo violeta
+  * text-white: Texto blanco
+  * font-medium: Font weight regular
+  * rounded-md: Bordes redondeados
+  * hover:bg-primary: Al pasar el ratón, el fondo cambia a amarillo 
+  * hover:text-secondary: El texto cambia a violeta al hacer hover
+  * transition: Transición al hacer hover.
+
+  **Quinto commit -m "Acabados estilos de contacte.html"**
