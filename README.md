@@ -10,7 +10,7 @@ Los siguientes pasos:
 
 ### Git init y creación del repositorio en Github
 - Creo el repositorio de Github llamado laiaia3  
-- Creo git init con commit "Mi primer commit  Instalación del boilerplate"  y subo al repositorio
+- Creo git init con **commit "Mi primer commit  Instalación del boilerplate"**  y subo al repositorio
 - git remote add origin https://github.com/drosellopa/laiaia3.git
 - git branch -M main
 - git push -u origin main
@@ -25,7 +25,7 @@ Al principio intenté seguir al pie de la letra la estructura del boilerplate, u
 Después de muchos intentos, leer documentación, y ver varias intaslaciones de Tailwind sobre Parcel, vi que la única forma de que todo funcione sin errores de compilación era usar @import aunque Sass lo marca como obsoleto. Al final, opté por esta solución porque el proyecto, de esta forma funciona.  
 Sé que no es lo más moderno, pero así es la única forma de que funcione.
 
-Segundo commit "Instalación de Tailwind"
+**Segundo commit "Instalación de Tailwind"**
 
 ## Colores y fuentes
 
@@ -42,7 +42,7 @@ Compruebo la fuente y ya es Roboto.
 
 ## Incorporo el header de la PAC2 
 Importo el header de la pac2 pero ya empiezo a usar el atomic css de Tailwind.  
-Describo lo que hago en cada etiqueta y la toma de decisiones en la documenteció para que quede reflejado todo lo que hago:  
+Describo lo que hago en cada etiqueta y la toma de decisiones en la documenteción para que quede reflejado todo lo que hago:  
 - Header: 
     * text-secondary: Color secundario para el texto
     * bg-white: Fondo blanco
@@ -73,3 +73,36 @@ Describo lo que hago en cada etiqueta y la toma de decisiones en la documenteci�
 - li a
     * hover:text-primary: al hacer un hover, cambia el color del secundario al primario.
     * transition: transición del hover.
+
+ **Tercer commit -m "Creado el header y nav con los estilos de tailwind"**
+
+ ## Incorporo el footer de la PAC2 
+ Para poder utilizar los iconos de fotnawesome, he puesto el link link a *../node_modules/@fortawesome/fontawesome-free/css/all.min.css* en el header.
+ - footer  
+  * bg-gray-200: Fondo gris claro 
+  * py-6: Padding arriba y abajo  
+
+- div   
+  * container: Limita el ancho máximo del contenido de forma responsive  
+  * mx-auto: Centra el contenedor horizontalmente con márgenes auto  
+  * px-4: Padding horizontal de 1rem (16px)   
+  * flex: flex al contenedor 
+  * flex-col: flex columna para que los iconos se vean arriba y el texto del footer abajo
+  * items-center: alinea al centro
+  * gap-4: separación de hijos del flex, el gap. 
+
+- div de iconos
+  * flex: flex en los iconos 
+  * gap-4: separación de hijos
+  * text-xl: tamaño grande de los iconos  
+
+- Iconos  
+  * hover:text-primary: Al pasar el ratón cambia del azul al amarillo 
+  * transition: Se añade transición
+  * cursor-pointer: Cambia el cursor a pointer   
+
+- div texto legal 
+  * text-gray-600: Color gris  
+  * text-sm: tamaño pequeño
+
+**Cuarto commit -m "Creado el footer con los estilos de tailwind. Importado FontAwesome"**
