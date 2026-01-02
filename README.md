@@ -153,3 +153,34 @@ Las clases:
   * transition: Transición al hacer hover.
 
   **Quinto commit -m "Acabados estilos de contacte.html"**
+
+  ## Página jornades2025.html
+  Creo que he conseguido que se parezca bastante a la de la pac2.
+  Esta página tiene varias secciones etiquetadas con los id:  
+  - banner
+  - intro 
+  - activitats
+  - homenatge
+  Cada una de ellas está tratada de una forma distinta, vamos a analizarlas
+  ### La sección Banner
+  A la sección banner no le he puesto ancho máximo pero si he jugado con el padding vertical y el tamaño del título para que sea responsive.
+  - **py-10 sm:py-20 md:py-[100px] px-5**: El contenedor banner tiene un padding vertical de pequeño en móviles (tailwind es mobilefirst), el doble en pantallas pequeñas (sm), 100px en medianas o más (md), y siempre 20px de padding horizontal. 
+  - **text-3xl md:text-4xl lg:text-5xl**: En tamño del texto va creciendo también en función del dispositivo.
+
+  La imagen de fondo es lo único que he puesto en estilos por lo que los he incrustado con un style por no crear un externo. Creo que por un selector solo no es necesario crear un css externo.
+
+  ### La sección intro
+  Esta sección tiene un flex simple con un gap entre el título y los párrafos. También tiene como las siguientes secciones un ancho máximo. Todo esto lo refleja su clase: **flex flex-col md:flex-row gap-10 max-w-6xl mx-auto px-4**
+
+  ### La sección _activitats_ 
+  Esta sección ha costado más, he probado con un grid y ha quedado muy bien. Los iconos los he posicionado de forma absoluta con respecto a su li, para ello he utilizado las clases **absolute** y **relative**
+
+  ### La sección _homenatge_
+  Lo destacable de esta sección es el cite al que le he puesto un ancho máximo de 500px (max-w-[500px] ) y un lineheight, que no había usado hasta ahora de 2.5rem (leading-10).
+  Lo demás es bastante común.
+
+
+  ## index.html
+  Como pone el enunciado, he realizado un index bastante sencillo, con una breve introducción y un par de enlaces a las páginas anteriores.
+
+

@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/images/logo.webp">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
-    <title>La cuina de la iaia - La Jornada 2025</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/images/logo.webp">
+  <link rel="stylesheet" href="./assets/styles/main.scss">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <title>La cuina de la iaia - La Jornada 2025</title>
 </head>
-<body>
+<body class="font-sans text-gray-800">  
 <include src="./views/header.html"></include>
-
-<article class="article">
-    <header class="article__header">
-        <h1 class="article__title">La Cuina de la Iaia 2025: tradició, emoció i sabors que tornen</h1>
-        <p class="article__author">per drosellopa</p>
-    </header>  
-    <main class="main main-jornada2025">     
-        <section class="article__intro">
-            <h2 class="article__subtitle">Fira Barcelona – L’Hospitalet acollirà del 12 al 14 de desembre unes jornades dedicades a la cuina tradicional catalana.</h2>
-            <div class="article__text">
-                <p class="article__text">La <strong>Cuina de la Iaia 2025</strong> neix amb l’objectiu de recuperar els sabors d’abans i reivindicar la saviesa de 
-                    la cuina casolana com a patrimoni cultural. Durant tres dies, el recinte 
-                    <strong>Fira Barcelona – Gran Via (L’Hospitalet)</strong> es transformarà en un espai de trobada per a amants de la gastronomia, cuiners, famílies i curiosos que vulguin reviure la màgia dels fogons tradicionals.</p>
-                <p class="article__text">Aquestes jornades inclouran <strong>tallers pràctics, xerrades, degustacions i demostracions en directe</strong>, tot combinant receptes de tota la vida amb noves tècniques culinàries.</p>
-            </div>
-        </section>
-        <section class="article__list">
-            <ul class="article__list-items">
-                <li class="article__list-item">
-                    <h3 class="article__list-title">Tallers i demostracions</h3>
-                    <p class="article__list-text">Sessions pràctiques on els participants aprendran a elaborar <strong>plats tradicionals</strong> com escudella, fricandó o coca de recapte. També hi haurà <strong>demostracions de pastisseria catalana</strong>, <strong>tallers d’aprofitament</strong> dels aliments i espais on conèixer productors locals. Un punt de trobada ideal per descobrir tècniques i sabers culinaris d’abans.</p>
-                </li>
-                <li class="article__list-item">
-                    <h3 class="article__list-title">Xerrades i ponències</h3>
-                    <p class="article__list-text">Experts, cuiners i divulgadors compartiran reflexions sobre la importància de <strong>conservar el llegat culinari català</strong>. S’hi abordaran <strong>receptaris antics</strong>, la transmissió del coneixement gastronòmic i l’adaptació de plats tradicionals a la cuina actual. Ponències breus i accessibles per entendre la història i el valor cultural de la cuina de les nostres àvies.</p>
-                </li>
-                <li class="article__list-item">
-                    <h3 class="article__list-title">Activitats familiars</h3>
-                    <p class="article__list-text">Propostes pensades perquè petits i grans gaudeixin de la cuina junts: tallers de receptes senzilles, jocs gastronòmics, espais creatius i contacontes relacionats amb la tradició culinària. Les famílies podran preparar plats plegades, descobrir nous sabors i compartir una experiència divertida que acosta la cuina tradicional als més petits.</p>
-                </li>
-            </ul>
-            <figure class="article__list-figure">
-                <img src="./assets/images/iaia.jpg" alt="Iaia amb la seva neta" class="article__figure-image">
-                <figcaption class="article__figure-caption">Iaia amb la seva neta cuinant</figcaption>
-            </figure>
-        </section>
-        <section class="article__content">
-            <h2 class="article__heading">Un homenatge a les receptes que han passat de generació en generació</h2>
-
-            <p class="article__text">Les jornades posaran especial èmfasi en la importància del llegat culinari. Receptes transmeses oralment, plats originaris de la cuina de mercat i tradicions que connecten territoris i famílies.<strong>La cuina de la iaia és cultura viva</strong>.</p>
-
-            <blockquote class="article__quote">
-                🍴 Cuinar com la iaia no és només seguir una recepta: és cuidar, transmetre i compartir records. 🍴
-                <footer><cite>Elisabet Romeu</cite></footer>
-            </blockquote>
-
-            <p class="article__text">A més, hi haurà espais dedicats a la sostenibilitat alimentària i a la importància de consumir productes de proximitat, així com propostes innovadores que fusionen tècniques modernes amb sabors tradicionals.</p>
-        </section>
-        <figure class="article__figure">
-            <img src="./assets/images/taula_800.webp" alt="Plats tradicionals catalans" class="article__figure-image">
-            <figcaption class="article__figure-caption">Detall d’un plat de cullera tradicional amb productes locals.</figcaption>
+<section id="banner" class="py-10 sm:py-20 md:py-[100px] px-5 text-white" style="background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.7)), url('./assets/images/grill.webp'); background-size: cover; background-position: center;">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">La Cuina de la Iaia 2025: tradició, emoció i sabors que tornen</h1>
+    <p class="italic">per drosellopa</p>
+  </div>
+</section>
+<main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+    <section id="intro" class="flex flex-col md:flex-row gap-10 max-w-6xl mx-auto px-4">
+        <h2 class="text-xl md:text-2xl font-semibold text-left md:w-1/3">Fira Barcelona – L’Hospitalet acollirà del 12 al 14 de desembre unes jornades dedicades a la cuina tradicional catalana.</h2>
+        <div class="space-y-4 text-gray-700 md:w-2/3">
+            <p>La <strong class="font-bold">Cuina de la Iaia 2025</strong> neix amb l’objectiu de recuperar els sabors d’abans i reivindicar la saviesa de la cuina casolana com a patrimoni cultural. Durant tres dies, el recinte <strong class="font-bold">Fira Barcelona – Gran Via (L’Hospitalet)</strong> es transformarà en un espai de trobada per a amants de la gastronomia, cuiners, famílies i curiosos que vulguin reviure la màgia dels fogons tradicionals.</p>
+            <p>Aquestes jornades inclouran <strong class="font-bold">tallers pràctics, xerrades, degustacions i demostracions en directe</strong>, tot combinant receptes de tota la vida amb noves tècniques culinàries.</p>
+        </div>
+    </section>
+    <section id="activitats" class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <ul class="space-y-6">
+            <li class="pl-12 relative">
+                <img src="./assets/images/logo.webp" alt="" class="absolute left-0 top-0.5 w-8 h-8">
+                <h3 class="text-lg font-semibold text-secondary mb-2">Tallers i demostracions</h3>
+                <p class="text-gray-700">Sessions pràctiques on els participants aprendran a elaborar <strong class="font-bold">plats tradicionals</strong> com escudella, fricandó o coca de recapte. També hi haurà <strong class="font-bold">demostracions de pastisseria catalana</strong>, <strong class="font-bold">tallers d’aprofitament</strong> dels aliments i espais on conèixer productors locals. Un punt de trobada ideal per descobrir tècniques i sabers culinaris d’abans.</p>
+            </li>
+            <li class="pl-12 relative">
+                <img src="./assets/images/logo.webp" alt="" class="absolute left-0 top-0.5 w-8 h-8">
+                <h3 class="text-lg font-semibold text-secondary mb-2">Xerrades i ponències</h3>
+                <p class="text-gray-700">Experts, cuiners i divulgadors compartiran reflexions sobre la importància de <strong class="font-bold">conservar el llegat culinari català</strong>. S’hi abordaran <strong class="font-bold">receptaris antics</strong>, la transmissió del coneixement gastronòmic i l’adaptació de plats tradicionals a la cuina actual. Ponències breus i accessibles per entendre la història i el valor cultural de la cuina de les nostres àvies.</p>
+            </li>
+            <li class="pl-12 relative">
+                <img src="./assets/images/logo.webp" alt="" class="absolute left-0 top-0.5 w-8 h-8">
+                <h3 class="text-lg font-semibold text-secondary mb-2">Activitats familiars</h3>
+                <p class="text-gray-700">Propostes pensades perquè petits i grans gaudeixin de la cuina junts: tallers de receptes senzilles, jocs gastronòmics, espais creatius i contacontes relacionats amb la tradició culinària. Les famílies podran preparar plats plegades, descobrir nous sabors i compartir una experiència divertida que acosta la cuina tradicional als més petits.</p>
+            </li>
+        </ul>
+        <figure class="md:mt-4 max-w-[400px] mx-auto">
+            <img src="./assets/images/iaia.jpg" alt="Iaia amb la seva neta" class="w-full h-auto">
+            <figcaption class="mt-2 text-sm text-gray-600">Iaia amb la seva neta cuinant</figcaption>
         </figure>
-        <p class="article__text article__text--bottom">La Cuina de la Iaia 2025 és una invitació a recuperar la memòria gustativa del nostre territori. Un espai on tradició i innovació conviuen per celebrar una gastronomia que no només alimenta, sinó que emociona.</p>
-    </main>
-</article>
-
+    </section>
+    <section id="homenatge" class="space-y-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl">Un homenatge a les receptes que han passat de generació en generació</h2>
+        <p class="text-gray-700">Les jornades posaran especial èmfasi en la importància del llegat culinari. Receptes transmeses oralment, plats originaris de la cuina de mercat i tradicions que connecten territoris i famílies.<strong class="font-bold">La cuina de la iaia és cultura viva</strong>.</p>
+        <blockquote class="font-serif italic text-2xl text-white bg-secondary p-10 rounded-lg shadow-md max-w-[500px] leading-10 mx-auto">
+        🍴 Cuinar com la iaia no és només seguir una recepta: és cuidar, transmetre i compartir records. 🍴
+        <footer class="mt-3 text-xs text-right"><cite>Elisabet Romeu</cite></footer>
+        </blockquote>
+        <p class="text-gray-700">A més, hi haurà espais dedicats a la sostenibilitat alimentària i a la importància de consumir productes de proximitat, així com propostes innovadores que fusionen tècniques modernes amb sabors tradicionals.</p>
+        <figure class="max-w-3xl mx-auto">
+            <img src="./assets/images/taula_800.webp" alt="Plats tradicionals catalans" class="w-full rounded-lg border border-gray-200">
+            <figcaption class="mt-2 text-sm text-gray-600">Detall d’un plat de cullera tradicional amb productes locals.</figcaption>
+        </figure>
+        <p class="text-gray-700 text-lg">La Cuina de la Iaia 2025 és una invitació a recuperar la memòria gustativa del nostre territori. Un espai on tradició i innovació conviuen per celebrar una gastronomia que no només alimenta, sinó que emociona.</p>    
+    </section>
+</main>
 <include src="./views/footer.html"></include>
 </body>
 </html>
