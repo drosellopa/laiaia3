@@ -1,0 +1,58 @@
+<section id="contact-form">
+      <h2 class="text-2xl font-bold text-secondary mb-6">Formulari de contacte</h2>
+      <form 
+        name="contacte"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="gracies.html"
+        class="space-y-5"
+      >
+        <input type="hidden" name="form-name" value="contacte">
+        <div class="hidden">
+          <label>Si ets humà, deixa aquest camp buit: <input name="bot-field"></label>
+        </div>
+        <div>
+          <label for="nom" class="block text-gray-700 font-medium mb-1">Nom:</label>
+          <input 
+            type="text" 
+            id="nom" 
+            name="nom" 
+            
+            required
+          >
+          <div class="mt-1 text-sm text-red-600">Si us plau, introdueix el teu nom.</div>
+        </div>
+
+        <div>
+          <label for="correu" class="block text-gray-700 font-medium mb-1">Correu electrònic:</label>
+          <input 
+            type="email" 
+            id="correu" 
+            name="correu" 
+            
+            required
+          >
+          <div class="mt-1 text-sm text-red-600">Si us plau, introdueix una adreça de correu vàlida.</div>
+        </div>
+
+        <div>
+          <label for="missatge" class="block text-gray-700 font-medium mb-1">Missatge:</label>
+          <textarea 
+            id="missatge" 
+            name="missatge" 
+            rows="5" 
+            
+            required
+          ></textarea>
+          <div class="mt-1 text-sm text-red-600">Si us plau, introdueix el teu missatge.</div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="px-6 py-2 bg-secondary text-white font-medium rounded-md hover:bg-primary hover:text-secondary transition"
+        >
+          Envia
+        </button>
+      </form>
+    </section>

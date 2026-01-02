@@ -197,3 +197,18 @@ En ocasiones hay que repetir muchas veces las mismas clases en los mismos elemen
 - input y textarea: En esta ocación era más que necesario un @apply, he atadado a los inputs y al texarea y le he aplicado la interminable lista de clases de css atómico => w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent    
 
 **Séptimo commit -m "creado los 3 apply en css incrustado"**
+
+## Error Envío formulario en Netlyfy
+He congigurado la página gracies.html para que se vea cuando se envía un formulario. Desde el build local se ve sin problemas al enviar el formulario pero desde Netlify no. He realizado varios commits para colucionarlo sin éxito.  
+Al no tener JS, los errores del formulario se siguen viendo. Lo dejo así porque esta pack no va de este tema.  
+
+##  3 componentes con posthtml-include
+Voy a extraer:
+- **El formulario de contacto** por si se quiere reusar en otro lugar de la web. Para ello creo un form.html en views y hago el include en la página de contacto.
+
+- **El Nav**: He reutilizdo el nav, con el nombre nav.html, para mostrarlo tanto en el head como en la página de inicio, así lo tenemos centralzado. 
+
+- **Las redes sociales**: He credo social.html para incluirlo en el footer, pero serí bueno también incluirlo en otras páginas.
+
+
+
