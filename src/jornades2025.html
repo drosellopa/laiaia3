@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <title>La cuina de la iaia - La Jornada 2025</title>
+  <style>
+    #activitats h3 {
+        @apply text-lg font-semibold text-secondary mb-2;
+    }
+    .activitats_icon {
+      @apply absolute left-0 top-0.5 w-8 h-8;
+    }
+  </style>
 </head>
 <body class="font-sans text-gray-800">  
 <include src="./views/header.html"></include>
@@ -31,18 +39,18 @@
     <section id="activitats" class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <ul class="space-y-6">
             <li class="pl-12 relative">
-                <img src="./assets/images/logo.webp" alt="" class="absolute left-0 top-0.5 w-8 h-8">
-                <h3 class="text-lg font-semibold text-secondary mb-2">Tallers i demostracions</h3>
+                <img src="./assets/images/logo.webp" alt="" class="activitats_icon">
+                <h3>Tallers i demostracions</h3>
                 <p class="text-gray-700">Sessions pràctiques on els participants aprendran a elaborar <strong class="font-bold">plats tradicionals</strong> com escudella, fricandó o coca de recapte. També hi haurà <strong class="font-bold">demostracions de pastisseria catalana</strong>, <strong class="font-bold">tallers d’aprofitament</strong> dels aliments i espais on conèixer productors locals. Un punt de trobada ideal per descobrir tècniques i sabers culinaris d’abans.</p>
             </li>
             <li class="pl-12 relative">
-                <img src="./assets/images/logo.webp" alt="" class="absolute left-0 top-0.5 w-8 h-8">
-                <h3 class="text-lg font-semibold text-secondary mb-2">Xerrades i ponències</h3>
+                <img src="./assets/images/logo.webp" alt="" class="activitats_icon">
+                <h3>Xerrades i ponències</h3>
                 <p class="text-gray-700">Experts, cuiners i divulgadors compartiran reflexions sobre la importància de <strong class="font-bold">conservar el llegat culinari català</strong>. S’hi abordaran <strong class="font-bold">receptaris antics</strong>, la transmissió del coneixement gastronòmic i l’adaptació de plats tradicionals a la cuina actual. Ponències breus i accessibles per entendre la història i el valor cultural de la cuina de les nostres àvies.</p>
             </li>
             <li class="pl-12 relative">
-                <img src="./assets/images/logo.webp" alt="" class="absolute left-0 top-0.5 w-8 h-8">
-                <h3 class="text-lg font-semibold text-secondary mb-2">Activitats familiars</h3>
+                <img src="./assets/images/logo.webp" alt="" class="activitats_icon">
+                <h3>Activitats familiars</h3>
                 <p class="text-gray-700">Propostes pensades perquè petits i grans gaudeixin de la cuina junts: tallers de receptes senzilles, jocs gastronòmics, espais creatius i contacontes relacionats amb la tradició culinària. Les famílies podran preparar plats plegades, descobrir nous sabors i compartir una experiència divertida que acosta la cuina tradicional als més petits.</p>
             </li>
         </ul>

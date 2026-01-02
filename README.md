@@ -183,4 +183,15 @@ Las clases:
   ## index.html
   Como pone el enunciado, he realizado un index bastante sencillo, con una breve introducción y un par de enlaces a las páginas anteriores.
 
+**Sexto commit -m "Creado jornades2025.html y index.html"** 
 
+
+## @apply
+En ocasiones hay que repetir muchas veces las mismas clases en los mismos elementos y hace pensar que el atomic-css no es una buena opción pero con @aplly se solucionan esos problemas. Simplemente pones una clase en el elemento correspondiente y le aplicas todos estos estilos repetitivos. Yo lo he hecho en:
+- Iconos de lista en jornades2025.html donde se repetía muchas veces en la imagen del icono esta clase: class="absolute left-0 top-0.5 w-8 h-8"; Lo que he hecho es poner una clase  solo en esa imagen: class="activitats_icon" y en un estilo incrustado (de momento para probar y como solo está en esta página ya sería suficiente), he puesto:
+.activitats_icon {  
+      @apply absolute left-0 top-0.5 w-8 h-8;  
+}  
+- H3 de #activitats: En esta ocación pasa algo parecido, se repite 3 veces la misma configuración por lo que, en lugar de crear una clase nueva he "atacado" a #activitats h3 y le he aplicado el text-lg font-semibold text-secondary mb-2 que tenía. He aprovechado el mismo estilo incrustado
+
+- input y textarea: En esta ocación era más que necesario un @apply, he atadado a los inputs y al texarea y le he aplicado la interminable lista de clases de css atómico => w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent    
