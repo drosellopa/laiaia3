@@ -1,4 +1,10 @@
 # PAC3 
+Este documento ha sido creado en el archivo README.md del proyecto y se va a pasar a pdf para la entrega.
+- Creador: Daniel Roselló Parra
+- e-mail: drosellopa@uoc.edu
+- Netlify: [https://iaia3.netlify.app/](https://iaia3.netlify.app/)
+
+
 ## Creación del proyecto
 ### Descarga del bolierplate
 Lo primero que hago es descargar el boilerplate y descomprimirlo en la carpeta PAC3.  
@@ -213,30 +219,48 @@ Voy a extraer:
 **Commit número 11: commit -m "Creados los 3 posthtml-include"**
 
 ## Página creada con IA
-He decicido crear un diseño parecido al que se ha adjuntado en la pac llamado figma.pdf.  
-He ido a ChatGpt y he solicitado crear un prompt para crear una web en stich ia de Google sobre un proyecto creado con Tailwind a partir del enunciado de la pec. Me ha dado el siguiente prompt: 
+He usado ChatGpt.  
+Mi primer prompt ha sido subir el pdf dado en el enunciado y le he dicho: 
+"Esto es una web y quiero que la describas lo mejor que puedas. No describas imágenes pero sí tamaños y posiciones."
+Me ha hecho una drescripción muy larga de la página, la iba a poner en una IA especializada en crear páginas web, el Stich de Google que justo hoy he visto una reseña muy buena en redes sociales. Pero he decidido decirle a chat gpt:   
+"Quiero que la hagas para poderla integrar en un proyecto con tailwind 3. Los colores que se usarán serán tonalidades de grises y un primary y un secondary que ya tengo en mi proyecto. La fuente que uso es una sans serif pero ya la uso en el proyecto. Crea la página de la forma más fiel posible. Las imágenes tómalas genéricas de donde quieras pero han de estar relacionadas con la cocina y las de las tarjetas con 3 personas. A estas personas ponles un nombre cualquiera que coincida con su sexo. Inventa un texto para cada card relacionado con el tema. El texto ha de estar en catalán"  
+El resultado ha sido muy bueno pero la página no acaba de ser responsive, sobre todo el menú, por lo que le he hecho otro prompt:
+"Está muy bien pero hazla responsive sin el uso de js. Haz algo para que el menú se vea bien el modo móvil."  
 
-Transforma este diseño en una página HTML lista para integrar en un proyecto con Tailwind CSS v3, siguiendo el enfoque utility-first.  
-Requisitos técnicos:  
-- No uses <style>, CSS inline (style=""), ni archivos CSS externos.
-- Solo clases de Tailwind en el HTML (ej: class="text-lg font-bold").
-- Usa colores neutros (grises) y colores primay y secondary
-- Responsive: debe verse bien en móvil y desktop.
-- Tipografía: usa font-sans
-- No incluyas JavaScript ni interactividad compleja.
-- El código debe ser válido, limpio y listo para copiar en un archivo .html dentro de un proyecto que ya tiene Tailwind configurado.
-- No añadas contenido extra: reproduce fielmente la estructura, texto e imágenes del diseño (usa src="./assets/images/placeholder.jpg" para imágenes).
+En este caso ha intentado hacer que el menú en módo nóvil aparezca y desaparezca con un clic en el menú de barras, a través de un checkbox. Pero no ha tenido éxito. No he insistido más porque creo que no era necesario,
 
-He subido el pdf a stich y le he pegado el prompt. 
-El resultado es bueno pero quiero integrarlo en el proyecto de la iaia por lo que le pongo que ha de añadir los include en el header y en el footer. Que la página ha de estar en catalán.
+He cambiado el enlace de la home por index.html  
 
-La IA ha puesto un enlace a la librería de tailwind y me ha dicho en un comentario < !-- Tailwind CSS CDN (for quick testing, in a real project you'd use your build) --> por lo que he sustituido la librería por los links del header de los HTML del proyecto.  
-He agregado ia.html al componente nav.html y ya está integrado.  
+He probado con stich de Google, de hecho hay un commit con esa página pero ha creado demasiados div, Chatgpt ha sido mucho más eficiente.
 
-### Explicación del código de la IA
-Ha creado muchos más divs y clases de los que yo hubiera creado pero la IA ha hecho un trabajo bastante decente, la verdad.  
-Ha cogido el diseño y lo ha traducido a HTML con Tailwind de forma bastante acertada.    
-La página es responsive, las tarjetas de las recetas están bien. 
-Todo está hecho con clases de Tailwind como le pedía en el enunciado. Incluso ha incluido un menú móvil fijo en la parte inferior.  
+### El código de la ia 
+Me ha sorprendido la limpieza, ha usado etiquetas semánticas adecuadas, todo comentado y ni un div extra (caso contrario a stich) y clases tailwind muy buenas. Es curioso que pone el flex al final.
+Las imágenes de los concursantes las ha enlazado desde una api llamada ramdomuser. La imagen de la cocina la es de unsplash.  
+
+La verdad, ha reproducido la página mucho mejor de lo que me pensaba.  
+
+He integrado el HTML en el proyecto con el nombre de ia.html y he creado el enlace en el componente nav.
+
+## Preguntas finales
+Aunque creo que muchas algunas de las preguntas que se plantean han quedad respondidas en este documento, voy a responderlas una a una:
+### ¿Qué diferencias hay entre el enfoque de tipo CSS semántico (el que usaste en las otras PEC) y el CSS de utilidades? ¿Cómo afectó esto a tu proceso de desarrollo? ¿Y a tu código?
+En las PEC anteriores usaba un enfoque de CSS semántico, es decir, creaba clases con nombres que describían el contenido o la función de la etiqueta HTML, como .article__title o .form-contacte, y luego definía su apariencia en SCSS. El HTML queda mucho más limpio y ordenado pero tienes que tener mucho orden y consultar mucho el HTML y el CSS para que todo funcione y no redundar mucho. Algo que me cuesta mucho es ponerle nombres semánticos a las secciones y a todas las etiquetas hijas con el método BEM.   
+Con Tailwind en el PAC3 he trabajado con el css atómico por lo que ya no creo clases nuevas, sino que pongo directamente las clases de la librería en el propio HTML. Al principio me costó adaptarme, porque el HTML se ve más “cargado” de clases, pero enseguida vi las ventajas: desarrollo más rápido, todo queda más coherente y no he necesitado código CSS personalizado, solo tres clases extraídas con @apply para el CSS repetido, y todo el estilo vive en el HTML como combinación de utilidades. 
+### ¿Qué diferencias encontraste entre usar una librería de componentes y una librería de utilidades?
+La diferencia más importante es que en una librería de componentes como Bootstrap me ofrecen bloques ya hechos, es muy cómodo pero si quieres cambiar algo pequeño tienes que crear otro css y "competir" con el de Bootstrap.  
+Sin embargo con una librería de de utilidades como Tailwind lo que te da son pequeños estilos (átomos) que vas montando poco a poco de tal forma que puedes construir lo que quieras.  
+Con Bootstrap no hubiera sido nada fácil clonar la página de la pac, pero con Tailwind solo tienes que traducir css nativo a clases tailwind. 
+
+### ¿Qué clases y componentes decidiste extraer y por qué?
+Esta está contestada pero la vuelvo a pegar
+- **El formulario de contacto** por si se quiere reusar en otro lugar de la web. Para ello creo un form.html en views y hago el include en la página de contacto.
+
+- **El Nav**: He reutilizdo el nav, con el nombre nav.html, para mostrarlo tanto en el head como en la página de inicio, así lo tenemos centralzado. 
+
+- **Las redes sociales**: He credo social.html para incluirlo en el footer, pero serí bueno también incluirlo en otras páginas.
+### Analiza el código generado por la IA y proporciona toda la secuencia de prompts que has utilizado hasta llegar a la solución. ¿Ha cometido la herramienta errores? Cuáles son y cuál es la dificultad de corregir el código en contraposición a escribirlo de cero. ¿Cuál es tu opinión sobre el uso de estas herramientas?
+Chatgpt apenas ha cometido errores, creo que en lo único que ha fallado ha sido en mi prompt porque no le he dicho que haga la página adaptable.  
+La dificultad de corregir código hecho por una IA es el igual que si intentas modificar el código de otro programador, primero tienes que estudiar lo que ha hecho y luego aplicar los cambios que consideres. En este caso Chapgpt ha hecho un código muy simple y entendible que no supondría mucho esfuerzo modificar.En el caso de Stich de Google, hubiera supuesto toda una odisea por los innumerables divs y estilos innecesarios que ha generado.  
+Mi opinión sobre la IA es que es eso, una herramienta más. El programador ha de tomar las decisiones finales y siempre ha de modificar algo, aunque sean un proyecto muy sencillo como este. Pero desde luego, puede ser de gran ayuda sobre todo para encontrar errores o crear bases desde las que trabajar.
 
 

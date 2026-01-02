@@ -13,137 +13,204 @@
     <title>Concurs de Cuina</title>
     
 </head>
-<body class="font-sans bg-neutral-50 text-neutral-800">
+ <body class="bg-white text-gray-800 antialiased">
+    <!-- Header -->
+    <header class="w-full border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Brand -->
+            <div class="text-sm font-medium">
+            Cooking contest 2024 edition
+            </div>
 
-    <include src="./views/header.html"></include>
+            <!-- Mobile toggle -->
+           
 
-    <div class="min-h-screen flex flex-col">
-        <main class="flex-grow">
-            <!-- Hero Section -->
-            <section class="relative bg-neutral-100 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-                <div class="max-w-md mx-auto px-4 sm:max-w-2xl sm:px-6 lg:max-w-5xl lg:px-8 relative z-10">
-                    <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-                        <div class="text-center lg:text-left">
-                            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 leading-tight mb-4">
-                                Descobreix els nostres talentosos concursants!
-                            </h1>
-                            <p class="mt-4 text-lg text-neutral-600">
-                                Explora les creacions culinàries que ens han deixat sense paraules. Coneix els xefs i les seves increïbles receptes.
-                            </p>
-                            <div class="mt-8 flex justify-center lg:justify-start">
-                                <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-violet-800 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 transition duration-300 ease-in-out">
-                                    Veure tots els concursants
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mt-10 lg:mt-0 relative">
-                            <img class="w-full h-auto object-cover rounded-lg shadow-xl" src="./assets/images/placeholder.jpg" alt="Xef cuinant al concurs">
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <label
+            for="menu-toggle"
+            class="md:hidden cursor-pointer flex flex-col gap-1"
+            >
+            <span class="w-6 h-0.5 bg-gray-800"></span>
+            <span class="w-6 h-0.5 bg-gray-800"></span>
+            <span class="w-6 h-0.5 bg-gray-800"></span>
+            </label>
 
-            <!-- Contestants and Recipes Section -->
-            <section class="py-12 sm:py-16 bg-white">
-                <div class="max-w-md mx-auto px-4 sm:max-w-2xl sm:px-6 lg:max-w-5xl lg:px-8">
-                    <div class="text-center">
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 mb-2">
-                            Receptes destacades
-                        </h2>
-                        <p class="text-lg text-neutral-600 mb-8">
-                            Una mostra de la creativitat i el sabor dels nostres participants.
-                        </p>
-                    </div>
+             <input type="checkbox" id="menu-toggle" class="peer hidden" />
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">El concurs</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Receptes</a>
+            <a
+                href="#"
+                class="px-4 py-2 rounded-md bg-primary text-white font-medium"
+            >
+                Concursants
+            </a>
+            </nav>
+        </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Recipe Card 1 -->
-                        <div class="bg-neutral-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <img class="w-full h-48 object-cover" src="./assets/images/placeholder.jpg" alt="Nom de la recepta 1">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-neutral-900 mb-2">
-                                    Títol de la Recepta U
-                                </h3>
-                                <p class="text-neutral-600 text-sm mb-4">
-                                    Per <span class="font-medium text-violet-800">Nom del Concursant 1</span>
-                                </p>
-                                <p class="text-neutral-700 leading-relaxed mb-4">
-                                    Una descripció breu i apetitosa de la recepta, destacant els seus ingredients principals i el sabor únic.
-                                </p>
-                                <a href="#" class="inline-flex items-center text-violet-800 hover:text-violet-700 font-medium">
-                                    Veure recepta completa
-                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Recipe Card 2 -->
-                        <div class="bg-neutral-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <img class="w-full h-48 object-cover" src="./assets/images/placeholder.jpg" alt="Nom de la recepta 2">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-neutral-900 mb-2">
-                                    Títol de la Recepta Dos
-                                </h3>
-                                <p class="text-neutral-600 text-sm mb-4">
-                                    Per <span class="font-medium text-violet-800">Nom del Concursant 2</span>
-                                </p>
-                                <p class="text-neutral-700 leading-relaxed mb-4">
-                                    Una descripció breu i apetitosa de la recepta, destacant els seus ingredients principals i el sabor únic.
-                                </p>
-                                <a href="#" class="inline-flex items-center text-violet-800 hover:text-violet-700 font-medium">
-                                    Veure recepta completa
-                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Recipe Card 3 -->
-                        <div class="bg-neutral-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <img class="w-full h-48 object-cover" src="./assets/images/placeholder.jpg" alt="Nom de la recepta 3">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-neutral-900 mb-2">
-                                    Títol de la Recepta Tres
-                                </h3>
-                                <p class="text-neutral-600 text-sm mb-4">
-                                    Per <span class="font-medium text-violet-800">Nom del Concursant 3</span>
-                                </p>
-                                <p class="text-neutral-700 leading-relaxed mb-4">
-                                    Una descripció breu i apetitosa de la recepta, destacant els seus ingredients principals i el sabor únic.
-                                </p>
-                                <a href="#" class="inline-flex items-center text-violet-800 hover:text-violet-700 font-medium">
-                                    Veure recepta completa
-                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <include src="./views/footer.html"></include>
-
-        <!-- Mobile Navigation (Bottom Bar) -->
-        <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-neutral-200 z-50 md:hidden">
-            <div class="max-w-lg mx-auto flex justify-around h-16">
-                <a href="#" class="flex flex-col items-center justify-center text-violet-800 flex-1 px-2 py-1">
-                    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11v10a1 1 0 001 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h.01"></path></svg>
-                    <span class="text-xs">Inici</span>
-                </a>
-                <a href="#" class="flex flex-col items-center justify-center text-neutral-500 hover:text-violet-800 flex-1 px-2 py-1">
-                    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span class="text-xs">El concurs</span>
-                </a>
-                <a href="#" class="flex flex-col items-center justify-center text-neutral-500 hover:text-violet-800 flex-1 px-2 py-1">
-                    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m10.707 0l-.707.707M10 21h4m-4-8v-4h4v4h-4z"></path></svg>
-                    <span class="text-xs">Receptes</span>
-                </a>
-                <a href="#" class="flex flex-col items-center justify-center text-neutral-500 hover:text-violet-800 flex-1 px-2 py-1">
-                    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a4 4 0 100-8 4 4 0 000 8z"></path></svg>
-                    <span class="text-xs">Concursants</span>
-                </a>
+        <!-- Mobile menu -->
+        <nav
+            class="md:hidden max-h-0 peer-checked:max-h-96 overflow-hidden transition-all duration-300 border-t border-gray-200"
+        >
+            <div class="px-6 py-4 flex flex-col gap-4 text-sm">
+            <a href="index.html" class="text-gray-700">Home</a>
+            <a href="#" class="text-gray-700">El concurs</a>
+            <a href="#" class="text-gray-700">Receptes</a>
+            <a
+                href="#"
+                class="inline-block w-fit px-4 py-2 rounded-md bg-primary text-white font-medium"
+            >
+                Concursants
+            </a>
             </div>
         </nav>
-    </div>
+    </header>
 
-</body>
+    <!-- Hero -->
+    <section class="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
+      <h1 class="text-5xl font-bold mb-6">
+        Concursants
+      </h1>
+      <p class="text-gray-500 text-lg">
+        Aquesta secció presenta les receptes creades pels millors concursants
+        d’aquesta edició
+      </p>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="max-w-6xl mx-auto px-6 mb-20">
+      <div class="rounded-xl overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe"
+          alt=""
+          class="w-full h-[420px] object-cover"
+        />
+      </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+      <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-2">
+          Les receptes
+        </h2>
+        <p class="text-gray-500">
+          Descobreix algunes de les propostes gastronòmiques més destacades
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <article class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col">
+          <h3 class="text-lg font-semibold mb-3">
+            Pasta cremosa amb marisc
+          </h3>
+          <p class="text-gray-600 text-sm mb-6 flex-1">
+            Una recepta inspirada en la cuina mediterrània, on el marisc fresc
+            s’integra amb una salsa suau i aromàtica, pensada per compartir.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt=""
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <span class="text-sm font-medium text-gray-700">
+              Jordi Puig
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col">
+          <h3 class="text-lg font-semibold mb-3">
+            Salmó a la fusta de cedre
+          </h3>
+          <p class="text-gray-600 text-sm mb-6 flex-1">
+            Un plat delicat que combina tècnica i respecte pel producte,
+            potenciant els sabors naturals del peix amb una cocció precisa.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://randomuser.me/api/portraits/women/45.jpg"
+              alt=""
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <span class="text-sm font-medium text-gray-700">
+              Marta Soler
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col">
+          <h3 class="text-lg font-semibold mb-3">
+            Pollastre marinat amb herbes
+          </h3>
+          <p class="text-gray-600 text-sm mb-6 flex-1">
+            Una proposta honesta i saborosa, basada en una marinada lenta
+            d’herbes aromàtiques que realça la textura i el gust del pollastre.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt=""
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <span class="text-sm font-medium text-gray-700">
+              Anna Riera
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div>
+          <div class="font-medium mb-4">
+            Cooking contest 2024 edition
+          </div>
+          <div class="flex gap-4 text-gray-500 text-sm">
+            <span>FB</span>
+            <span>IN</span>
+            <span>IG</span>
+          </div>
+        </div>
+
+        <!-- Recipes -->
+        <div>
+          <h4 class="font-semibold mb-4">Receptes</h4>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>Pasta amb marisc</li>
+            <li>Salmó al forn</li>
+            <li>Pollastre marinat</li>
+          </ul>
+        </div>
+
+        <!-- Contestants -->
+        <div>
+          <h4 class="font-semibold mb-4">Concursants</h4>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>Jordi Puig</li>
+            <li>Marta Soler</li>
+            <li>Anna Riera</li>
+          </ul>
+        </div>
+
+        <!-- Editions -->
+        <div>
+          <h4 class="font-semibold mb-4">Edicions</h4>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>2024</li>
+            <li>2023</li>
+            <li>2022</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
