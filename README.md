@@ -210,5 +210,33 @@ Voy a extraer:
 
 - **Las redes sociales**: He credo social.html para incluirlo en el footer, pero serí bueno también incluirlo en otras páginas.
 
+**Commit número 11: commit -m "Creados los 3 posthtml-include"**
+
+## Página creada con IA
+He decicido crear un diseño parecido al que se ha adjuntado en la pac llamado figma.pdf.  
+He ido a ChatGpt y he solicitado crear un prompt para crear una web en stich ia de Google sobre un proyecto creado con Tailwind a partir del enunciado de la pec. Me ha dado el siguiente prompt: 
+
+Transforma este diseño en una página HTML lista para integrar en un proyecto con Tailwind CSS v3, siguiendo el enfoque utility-first.  
+Requisitos técnicos:  
+- No uses <style>, CSS inline (style=""), ni archivos CSS externos.
+- Solo clases de Tailwind en el HTML (ej: class="text-lg font-bold").
+- Usa colores neutros (grises) y colores primay y secondary
+- Responsive: debe verse bien en móvil y desktop.
+- Tipografía: usa font-sans
+- No incluyas JavaScript ni interactividad compleja.
+- El código debe ser válido, limpio y listo para copiar en un archivo .html dentro de un proyecto que ya tiene Tailwind configurado.
+- No añadas contenido extra: reproduce fielmente la estructura, texto e imágenes del diseño (usa src="./assets/images/placeholder.jpg" para imágenes).
+
+He subido el pdf a stich y le he pegado el prompt. 
+El resultado es bueno pero quiero integrarlo en el proyecto de la iaia por lo que le pongo que ha de añadir los include en el header y en el footer. Que la página ha de estar en catalán.
+
+La IA ha puesto un enlace a la librería de tailwind y me ha dicho en un comentario < !-- Tailwind CSS CDN (for quick testing, in a real project you'd use your build) --> por lo que he sustituido la librería por los links del header de los HTML del proyecto.  
+He agregado ia.html al componente nav.html y ya está integrado.  
+
+### Explicación del código de la IA
+Ha creado muchos más divs y clases de los que yo hubiera creado pero la IA ha hecho un trabajo bastante decente, la verdad.  
+Ha cogido el diseño y lo ha traducido a HTML con Tailwind de forma bastante acertada.    
+La página es responsive, las tarjetas de las recetas están bien. 
+Todo está hecho con clases de Tailwind como le pedía en el enunciado. Incluso ha incluido un menú móvil fijo en la parte inferior.  
 
 
